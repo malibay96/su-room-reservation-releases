@@ -1,0 +1,54 @@
+# Network captures and DevTools exports (may contain cookies, tokens, personal data)
+*.har
+*.saz
+*.pcap
+*.pcapng
+*.devtools
+*.trace
+Network*.json
+devtools-*.json
+
+# Secrets and keys
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+signing.properties
+keystore.properties
+local.properties
+secrets.*
+credentials*.json
+*token*.txt
+
+# Build output and packages
+dist/
+build/
+out/
+.gradle/
+*.apk
+*.aab
+*.zip
+*.crx
+*.xpi
+
+# Dependencies
+node_modules/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Editor and OS files
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,72 @@
+name: Bug report / Hata bildirimi
+description: Something does not work as expected / Beklendiği gibi çalışmayan bir şey var
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Privacy / Gizlilik:** Please blur or remove personal information (names, e-mail addresses, phone numbers, tokens, cookies) from screenshots and logs before attaching them. Never attach HAR files.
+        Ekran görüntülerine ve günlüklere eklemeden önce kişisel bilgileri (ad, e-posta, telefon, token, çerez) bulanıklaştır veya sil. HAR dosyası asla ekleme.
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform / Platform
+      options:
+        - Android app / Android uygulaması
+        - Edge extension / Edge eklentisi
+        - Chrome extension / Chrome eklentisi
+        - Bookmarklet / Yer imi
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version / Sürüm
+      description: Shown at the bottom of the page, e.g. 2.5.0 / Sayfanın altında görünür, ör. 2.5.0
+      placeholder: "2.5.0"
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Device and browser / Cihaz ve tarayıcı
+      description: e.g. Android 14 on Pixel 8, or Edge 130 on Windows 11 / ör. Android 14, Pixel 8 veya Windows 11'de Edge 130
+    validations:
+      required: false
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened? / Ne oldu?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce / Adımlar
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: false
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect? / Ne bekliyordun?
+    validations:
+      required: false
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots / Ekran görüntüleri
+      description: Drag images here. Blur personal information first. / Görselleri buraya sürükle. Önce kişisel bilgileri bulanıklaştır.
+    validations:
+      required: false
+  - type: checkboxes
+    id: privacy-check
+    attributes:
+      label: Privacy check / Gizlilik kontrolü
+      options:
+        - label: I removed or blurred all personal information. / Tüm kişisel bilgileri sildim veya bulanıklaştırdım.
+          required: true
